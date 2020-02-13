@@ -34,23 +34,19 @@ public class GameClient extends ChannelInboundHandlerAdapter {
 
     public void connect(String host, int port) throws InterruptedException {
         EventLoopGroup workerGroup = new NioEventLoopGroup();
-        try {
-            Bootstrap b = new Bootstrap(); // (1)
-            b.group(workerGroup); // (2)
-            b.channel(NioSocketChannel.class); // (3)
-            b.option(ChannelOption.SO_KEEPALIVE, true); // (4)
-            b.handler(new ChannelInitializer<SocketChannel>() {
-                @Override
-                public void initChannel(SocketChannel ch) throws Exception {
-                    ch.pipeline().addLast(this);
-                }
-            });
-            // Start the client.
-            ChannelFuture future = b.connect(host, port).sync();// (5)
-            Channel channel = future.channel();
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
+        Bootstrap b = new Bootstrap(); // (1)
+        b.group(workerGroup); // (2)
+        b.channel(NioSocketChannel.class); // (3)
+        b.option(ChannelOption.SO_KEEPALIVE, true); // (4)
+        b.handler(new ChannelInitializer<SocketChannel>() {
+            @Override
+            public void initChannel(SocketChannel ch) throws Exception {
+                ch.pipeline().addLast(this);
+            }
+        });
+        // Start the client.
+        ChannelFuture future = b.connect(host, port).sync();// (5)
+        this.channel = future.channel();
     }
 
     public void write(Integer packetId, String params) {

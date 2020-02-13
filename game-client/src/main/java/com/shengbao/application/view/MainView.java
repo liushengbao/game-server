@@ -140,11 +140,12 @@ public class MainView {
                     if (name.equals("") || hostIp.equals("")) {
                         throw new Exception("姓名、服务器IP不能为空!");
                     }
-                    boolean flag = connectServer(port, hostIp, name);
-                    if (flag == false) {
-                        throw new Exception("与服务器连接失败!");
+                    isConnected = connectServer(port, hostIp, name);
+                    if (isConnected) {
+                        textArea.append("连接成功\r\n");
+                    } else {
+                        textArea.append("连接失败\r\n");
                     }
-                    textArea.append("连接成功\r\n");
                     frame.setTitle(name);
                 } catch (Exception exc) {
                     JOptionPane.showMessageDialog(frame, exc.getMessage(), "错误", JOptionPane.ERROR_MESSAGE);
@@ -192,10 +193,14 @@ public class MainView {
      * @param name
      * @throws InterruptedException
      */
-    public boolean connectServer(int port, String host, String name) throws InterruptedException {
-        client.connect(host, port);
-        isConnected = true;
-        return true;
+    public boolean connectServer(int port, String host, String name)  {
+        try {
+            client.connect(host, port);
+            return true;
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+        return false;
     }
 
     public void login() {
