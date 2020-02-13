@@ -11,6 +11,7 @@
     <modules>
         <module>game-common</module>
         <module>game-core</module>
+        <module>game-client</module>
     </modules>
     <name>game-server</name>
 
@@ -30,6 +31,11 @@
             <dependency>
                 <groupId>org.gameserver</groupId>
                 <artifactId>game-core</artifactId>
+                <version>1.0-SNAPSHOT</version>
+            </dependency>
+            <dependency>
+                <groupId>com.shengbao</groupId>
+                <artifactId>game-client</artifactId>
                 <version>1.0-SNAPSHOT</version>
             </dependency>
         </dependencies>

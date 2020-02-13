@@ -5,6 +5,7 @@ import io.netty.channel.ChannelInitializer;
 import io.netty.channel.ChannelPipeline;
 import io.netty.handler.codec.LengthFieldBasedFrameDecoder;
 import io.netty.handler.timeout.IdleStateHandler;
+import org.gameserver.core.server.net.handler.SingleServerMessageHandler;
 
 import java.nio.ByteOrder;
 
@@ -28,7 +29,7 @@ public class SingleServerInitalizer extends ChannelInitializer<Channel> {
         //拆包粘包处理
         pipeline.addLast(new LengthFieldBasedFrameDecoder(1024 * 1024, 0, 4));
         //byteBuf 转 业务消息处理
-        pipeline.addLast();
+        pipeline.addLast(new SingleServerMessageHandler());
     }
 
 }
