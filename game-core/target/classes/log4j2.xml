@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration packages="org.common.log.plugins"
+	shutdownHook="disable">
+
+	<!-- 定义变量 -->
+	<properties>
+		<property name="logPath">logs</property>
+	</properties>
+
+	<!-- 输出源，用于定义日志输出的地方 -->
+	<Appenders>
+		<RollingFile name="mainLogFile" fileName="logs/main.log"
+			filePattern="${logPath}/main.log.%d{yyyyMMdd}">
+			<PatternLayout pattern="[%d{yyyy-MM-dd HH:mm:ss} %-5level] %-16c:%L>%M - %msg%xEx%n" />
+			<TimeBasedTriggeringPolicy />
+		</RollingFile>
+
+		<RollingFile name="moduleLogFile" fileName="logs/module/module.log"
+			filePattern="${logPath}/module/module.log.%d{yyyyMMdd}">
+			<PatternLayout pattern="[%d{yyyy-MM-dd HH:mm:ss} %-5level] %-16c:%L>%M - %msg%xEx%n" />
+			<TimeBasedTriggeringPolicy />
+		</RollingFile>
+
+		<RandomAccessFile name="errorLogFile" fileName="logs/error/exception.log">
+			<PatternLayout pattern="[%d{yyyy-MM-dd HH:mm:ss} %-5level] %-16c:%L>%M - %msg%xEx%n" />
+			<Filters>
+				<!-- 限制日志级别在error及以上 -->
+				<ThresholdFilter level="error"/>
+			</Filters>
+		</RandomAccessFile>
+
+
+
+		<Console name="console" target="SYSTEM_OUT">
+			<PatternLayout pattern="[%d{yyyy-MM-dd HH:mm:ss} %-5level] %-16c:%L>%M - %msg%xEx%n" />
+		</Console>
+	</Appenders>
+
+	<!-- Loggers 定义记录器-->
+	<Loggers>
+	<!--	<AsyncLogger name="org.gameserver.common.log.Log4j2TryThrowableFilter" level="debug" additivity="false" includeLocation="true">
+			<appender-ref ref="errorLogFile" />
+		</AsyncLogger>-->
+		<AsyncLogger name="org.gameserver.single.module" level="info" additivity="false" includeLocation="true">
+			<appender-ref ref="moduleLogFile" />
+		</AsyncLogger>
+		<AsyncLogger name="io.netty" level="info" additivity="false" includeLocation="true">
+			<appender-ref ref="mainLogFile" />
+		</AsyncLogger>
+		<AsyncRoot level="INFO" includeLocation="true">
+			<AppenderRef ref="console" />
+			<AppenderRef ref="mainLogFile" />
+			<AppenderRef ref="errorLogFile"/>
+		</AsyncRoot>
+	</Loggers>
+</Configuration>

@@ -1,0 +1,27 @@
+[2020-03-09 15:33:34 INFO ] org.gameserver.core.SingleConsole:50>logStarting - Starting SingleConsole on DESKTOP-0C520QL with PID 16628 (E:\idea-workspace\game-server\game-core\target\classes started by bao in E:\idea-workspace\game-server)
+[2020-03-09 15:33:34 INFO ] org.gameserver.core.SingleConsole:675>logStartupProfileInfo - No active profile set, falling back to default profiles: default
+[2020-03-09 15:33:34 INFO ] org.gameserver.core.SingleConsole:59>logStarted - Started SingleConsole in 0.486 seconds (JVM running for 1.024)
+[2020-03-09 15:34:24 INFO ] org.gameserver.core.SingleConsole:50>logStarting - Starting SingleConsole on DESKTOP-0C520QL with PID 16852 (E:\idea-workspace\game-server\game-core\target\classes started by bao in E:\idea-workspace\game-server)
+[2020-03-09 15:34:24 INFO ] org.gameserver.core.SingleConsole:675>logStartupProfileInfo - No active profile set, falling back to default profiles: default
+[2020-03-09 15:34:24 INFO ] org.gameserver.core.SingleConsole:59>logStarted - Started SingleConsole in 0.49 seconds (JVM running for 1.025)
+[2020-03-09 15:37:33 INFO ] org.gameserver.core.SingleConsole:50>logStarting - Starting SingleConsole on DESKTOP-0C520QL with PID 8948 (E:\idea-workspace\game-server\game-core\target\classes started by bao in E:\idea-workspace\game-server)
+[2020-03-09 15:37:33 INFO ] org.gameserver.core.SingleConsole:675>logStartupProfileInfo - No active profile set, falling back to default profiles: default
+[2020-03-09 15:37:33 INFO ] org.gameserver.core.SingleConsole:59>logStarted - Started SingleConsole in 0.486 seconds (JVM running for 1.015)
+[2020-03-09 15:39:16 INFO ] org.gameserver.core.SingleConsole:50>logStarting - Starting SingleConsole on DESKTOP-0C520QL with PID 14052 (E:\idea-workspace\game-server\game-core\target\classes started by bao in E:\idea-workspace\game-server)
+[2020-03-09 15:39:16 INFO ] org.gameserver.core.SingleConsole:675>logStartupProfileInfo - No active profile set, falling back to default profiles: default
+[2020-03-09 15:39:17 INFO ] org.gameserver.core.SingleConsole:59>logStarted - Started SingleConsole in 0.559 seconds (JVM running for 1.412)
+[2020-03-09 15:40:26 INFO ] org.gameserver.core.SingleConsole:50>logStarting - Starting SingleConsole on DESKTOP-0C520QL with PID 10952 (E:\idea-workspace\game-server\game-core\target\classes started by bao in E:\idea-workspace\game-server)
+[2020-03-09 15:40:26 INFO ] org.gameserver.core.SingleConsole:675>logStartupProfileInfo - No active profile set, falling back to default profiles: default
+[2020-03-09 15:40:27 INFO ] org.gameserver.core.SingleConsole:59>logStarted - Started SingleConsole in 0.569 seconds (JVM running for 1.233)
+[2020-03-09 15:41:33 INFO ] org.gameserver.core.SingleConsole:50>logStarting - Starting SingleConsole on DESKTOP-0C520QL with PID 2808 (E:\idea-workspace\game-server\game-core\target\classes started by bao in E:\idea-workspace\game-server)
+[2020-03-09 15:41:33 INFO ] org.gameserver.core.SingleConsole:675>logStartupProfileInfo - No active profile set, falling back to default profiles: default
+[2020-03-09 15:41:33 INFO ] org.gameserver.core.SingleConsole:59>logStarted - Started SingleConsole in 0.562 seconds (JVM running for 1.214)
+[2020-03-09 15:43:12 INFO ] org.gameserver.core.SingleConsole:50>logStarting - Starting SingleConsole on DESKTOP-0C520QL with PID 14688 (E:\idea-workspace\game-server\game-core\target\classes started by bao in E:\idea-workspace\game-server)
+[2020-03-09 15:43:12 INFO ] org.gameserver.core.SingleConsole:675>logStartupProfileInfo - No active profile set, falling back to default profiles: default
+[2020-03-09 15:43:13 INFO ] org.gameserver.core.SingleConsole:59>logStarted - Started SingleConsole in 0.569 seconds (JVM running for 1.2)
+[2020-03-09 15:44:16 INFO ] org.gameserver.core.SingleConsole:50>logStarting - Starting SingleConsole on DESKTOP-0C520QL with PID 12004 (E:\idea-workspace\game-server\game-core\target\classes started by bao in E:\idea-workspace\game-server)
+[2020-03-09 15:44:16 INFO ] org.gameserver.core.SingleConsole:675>logStartupProfileInfo - No active profile set, falling back to default profiles: default
+[2020-03-09 15:44:16 INFO ] org.gameserver.core.SingleConsole:59>logStarted - Started SingleConsole in 0.572 seconds (JVM running for 1.213)
+[2020-03-09 15:57:38 INFO ] org.gameserver.core.SingleConsole:50>logStarting - Starting SingleConsole on DESKTOP-0C520QL with PID 10344 (E:\idea-workspace\game-server\game-core\target\classes started by bao in E:\idea-workspace\game-server)
+[2020-03-09 15:57:38 INFO ] org.gameserver.core.SingleConsole:675>logStartupProfileInfo - No active profile set, falling back to default profiles: default
+[2020-03-09 15:57:38 INFO ] org.gameserver.core.SingleConsole:59>logStarted - Started SingleConsole in 0.568 seconds (JVM running for 1.208)
