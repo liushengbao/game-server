@@ -1,4 +1,4 @@
-package org.gameserver.common.thread;
+package org.gameserver.core.thread;
 
 /**
  * @Author: shengbao

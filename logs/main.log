@@ -120,3 +120,144 @@
 	at java.lang.Thread.run(Thread.java:748) [?:1.8.0_201]
 
 [2020-03-13 17:31:03 INFO ] org.gameserver.core.network.handler.SingleServerMessageHandler:40>channelInactive - channel:[id: 0xb717c52c, L:/127.0.0.1:9999 ! R:/127.0.0.1:60395] 关闭
+[2020-03-13 18:18:19 INFO ] org.gameserver.core.server.SingleStartCloseHandler:28>onClose - 单服开始关服
+[2020-03-13 18:18:19 INFO ] org.gameserver.core.server.SingleStartCloseHandler:29>onClose - 单服关服成功
+[2020-03-13 20:39:36 INFO ] org.gameserver.core.SingleServerConsole:50>logStarting - Starting SingleServerConsole on DESKTOP-0C520QL with PID 9524 (E:\idea-workspace\game-server\game-core\target\classes started by bao in E:\idea-workspace\game-server)
+[2020-03-13 20:39:36 INFO ] org.gameserver.core.SingleServerConsole:675>logStartupProfileInfo - No active profile set, falling back to default profiles: default
+[2020-03-13 20:39:36 INFO ] org.springframework.context.annotation.ConfigurationClassEnhancer:355>intercept - @Bean method SingleBootConfig.requstScanner is non-static and returns an object assignable to Spring's BeanFactoryPostProcessor interface. This will result in a failure to process annotations such as @Autowired, @Resource and @PostConstruct within the method's declaring @Configuration class. Add the 'static' modifier to this method to avoid these container lifecycle issues; see @Bean javadoc for complete details.
+[2020-03-13 20:39:36 INFO ] org.gameserver.core.network.packet.PacketFactory:72>findClasses - 注册请求:101001 class:class org.gameserver.core.single.module.player.PlayerLoginAuthPacket
+[2020-03-13 20:39:36 INFO ] org.gameserver.core.SingleServerConsole:59>logStarted - Started SingleServerConsole in 0.663 seconds (JVM running for 1.363)
+[2020-03-13 20:39:36 INFO ] org.gameserver.core.SingleServerConsole:35>run - SingleServerConsole run args:org.springframework.boot.DefaultApplicationArguments@54f66455
+[2020-03-13 20:39:36 INFO ] org.gameserver.core.server.SingleStartCloseHandler:34>onStart - 单服启动开始
+[2020-03-13 20:39:36 WARN ] io.netty.bootstrap.ServerBootstrap:452>setChannelOption - Unknown channel option 'TCP_NODELAY' for channel '[id: 0x788e1940]'
+[2020-03-13 20:39:36 INFO ] io.netty.handler.logging.LoggingHandler:148>log - [id: 0x788e1940] REGISTERED
+[2020-03-13 20:39:36 INFO ] io.netty.handler.logging.LoggingHandler:148>log - [id: 0x788e1940] BIND: 0.0.0.0/0.0.0.0:9999
+[2020-03-13 20:39:36 INFO ] org.gameserver.core.server.SingleStartCloseHandler:40>onStart - 单服启动成功
+[2020-03-13 20:39:36 INFO ] io.netty.handler.logging.LoggingHandler:148>log - [id: 0x788e1940, L:/0:0:0:0:0:0:0:0:9999] ACTIVE
+[2020-03-13 20:39:58 INFO ] io.netty.handler.logging.LoggingHandler:148>log - [id: 0x788e1940, L:/0:0:0:0:0:0:0:0:9999] READ: [id: 0x7e0f1e4e, L:/127.0.0.1:9999 - R:/127.0.0.1:64812]
+[2020-03-13 20:39:58 INFO ] io.netty.handler.logging.LoggingHandler:148>log - [id: 0x788e1940, L:/0:0:0:0:0:0:0:0:9999] READ COMPLETE
+[2020-03-13 20:39:58 INFO ] org.gameserver.core.network.handler.SingleServerMessageHandler:30>channelActive - channel:[id: 0x7e0f1e4e, L:/127.0.0.1:9999 - R:/127.0.0.1:64812] 连接
+[2020-03-13 20:41:10 WARN ] io.netty.channel.DefaultChannelPipeline:1152>onUnhandledInboundException - An exceptionCaught() event was fired, and it reached at the tail of the pipeline. It usually means the last handler in the pipeline did not handle the exception. java.io.IOException: 远程主机强迫关闭了一个现有的连接。
+	at sun.nio.ch.SocketDispatcher.read0(Native Method) ~[?:1.8.0_201]
+	at sun.nio.ch.SocketDispatcher.read(SocketDispatcher.java:43) ~[?:1.8.0_201]
+	at sun.nio.ch.IOUtil.readIntoNativeBuffer(IOUtil.java:223) ~[?:1.8.0_201]
+	at sun.nio.ch.IOUtil.read(IOUtil.java:192) ~[?:1.8.0_201]
+	at sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:380) ~[?:1.8.0_201]
+	at io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:253) ~[netty-all-4.1.46.Final.jar:4.1.46.Final]
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1133) ~[netty-all-4.1.46.Final.jar:4.1.46.Final]
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:350) ~[netty-all-4.1.46.Final.jar:4.1.46.Final]
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:148) [netty-all-4.1.46.Final.jar:4.1.46.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:714) [netty-all-4.1.46.Final.jar:4.1.46.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:650) [netty-all-4.1.46.Final.jar:4.1.46.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:576) [netty-all-4.1.46.Final.jar:4.1.46.Final]
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:493) [netty-all-4.1.46.Final.jar:4.1.46.Final]
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:989) [netty-all-4.1.46.Final.jar:4.1.46.Final]
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74) [netty-all-4.1.46.Final.jar:4.1.46.Final]
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30) [netty-all-4.1.46.Final.jar:4.1.46.Final]
+	at java.lang.Thread.run(Thread.java:748) [?:1.8.0_201]
+
+[2020-03-13 20:41:10 INFO ] org.gameserver.core.network.handler.SingleServerMessageHandler:40>channelInactive - channel:[id: 0x7e0f1e4e, L:/127.0.0.1:9999 ! R:/127.0.0.1:64812] 关闭
+[2020-03-13 20:41:14 INFO ] io.netty.handler.logging.LoggingHandler:148>log - [id: 0x788e1940, L:/0:0:0:0:0:0:0:0:9999] READ: [id: 0xa5508384, L:/127.0.0.1:9999 - R:/127.0.0.1:64883]
+[2020-03-13 20:41:14 INFO ] io.netty.handler.logging.LoggingHandler:148>log - [id: 0x788e1940, L:/0:0:0:0:0:0:0:0:9999] READ COMPLETE
+[2020-03-13 20:41:14 INFO ] org.gameserver.core.network.handler.SingleServerMessageHandler:30>channelActive - channel:[id: 0xa5508384, L:/127.0.0.1:9999 - R:/127.0.0.1:64883] 连接
+[2020-03-13 20:43:50 INFO ] org.gameserver.core.server.SingleStartCloseHandler:28>onClose - 单服开始关服
+[2020-03-13 20:43:50 INFO ] org.gameserver.core.server.SingleStartCloseHandler:29>onClose - 单服关服成功
+[2020-03-13 20:43:51 INFO ] org.gameserver.core.SingleServerConsole:50>logStarting - Starting SingleServerConsole on DESKTOP-0C520QL with PID 3768 (E:\idea-workspace\game-server\game-core\target\classes started by bao in E:\idea-workspace\game-server)
+[2020-03-13 20:43:51 INFO ] org.gameserver.core.SingleServerConsole:675>logStartupProfileInfo - No active profile set, falling back to default profiles: default
+[2020-03-13 20:43:52 INFO ] org.springframework.context.annotation.ConfigurationClassEnhancer:355>intercept - @Bean method SingleBootConfig.requstScanner is non-static and returns an object assignable to Spring's BeanFactoryPostProcessor interface. This will result in a failure to process annotations such as @Autowired, @Resource and @PostConstruct within the method's declaring @Configuration class. Add the 'static' modifier to this method to avoid these container lifecycle issues; see @Bean javadoc for complete details.
+[2020-03-13 20:43:52 INFO ] org.gameserver.core.network.packet.PacketFactory:72>findClasses - 注册请求:101001 class:class org.gameserver.core.single.module.player.PlayerLoginAuthPacket
+[2020-03-13 20:43:52 INFO ] org.gameserver.core.SingleServerConsole:59>logStarted - Started SingleServerConsole in 0.665 seconds (JVM running for 1.446)
+[2020-03-13 20:43:52 INFO ] org.gameserver.core.SingleServerConsole:35>run - SingleServerConsole run args:org.springframework.boot.DefaultApplicationArguments@65ae095c
+[2020-03-13 20:43:52 INFO ] org.gameserver.core.server.SingleStartCloseHandler:34>onStart - 单服启动开始
+[2020-03-13 20:43:52 WARN ] io.netty.bootstrap.ServerBootstrap:452>setChannelOption - Unknown channel option 'TCP_NODELAY' for channel '[id: 0x3ead2c05]'
+[2020-03-13 20:43:52 INFO ] io.netty.handler.logging.LoggingHandler:148>log - [id: 0x3ead2c05] REGISTERED
+[2020-03-13 20:43:52 INFO ] io.netty.handler.logging.LoggingHandler:148>log - [id: 0x3ead2c05] BIND: 0.0.0.0/0.0.0.0:9999
+[2020-03-13 20:43:52 INFO ] org.gameserver.core.server.SingleStartCloseHandler:40>onStart - 单服启动成功
+[2020-03-13 20:43:52 INFO ] io.netty.handler.logging.LoggingHandler:148>log - [id: 0x3ead2c05, L:/0:0:0:0:0:0:0:0:9999] ACTIVE
+[2020-03-13 20:43:56 INFO ] io.netty.handler.logging.LoggingHandler:148>log - [id: 0x3ead2c05, L:/0:0:0:0:0:0:0:0:9999] READ: [id: 0x3d2b3f0c, L:/127.0.0.1:9999 - R:/127.0.0.1:65098]
+[2020-03-13 20:43:56 INFO ] io.netty.handler.logging.LoggingHandler:148>log - [id: 0x3ead2c05, L:/0:0:0:0:0:0:0:0:9999] READ COMPLETE
+[2020-03-13 20:43:56 INFO ] org.gameserver.core.network.handler.SingleServerMessageHandler:30>channelActive - channel:[id: 0x3d2b3f0c, L:/127.0.0.1:9999 - R:/127.0.0.1:65098] 连接
+[2020-03-13 20:45:32 INFO ] org.gameserver.core.server.SingleStartCloseHandler:28>onClose - 单服开始关服
+[2020-03-13 20:45:32 INFO ] org.gameserver.core.server.SingleStartCloseHandler:29>onClose - 单服关服成功
+[2020-03-13 20:46:15 INFO ] org.gameserver.core.SingleServerConsole:50>logStarting - Starting SingleServerConsole on DESKTOP-0C520QL with PID 6420 (E:\idea-workspace\game-server\game-core\target\classes started by bao in E:\idea-workspace\game-server)
+[2020-03-13 20:46:15 INFO ] org.gameserver.core.SingleServerConsole:675>logStartupProfileInfo - No active profile set, falling back to default profiles: default
+[2020-03-13 20:46:16 INFO ] org.springframework.context.annotation.ConfigurationClassEnhancer:355>intercept - @Bean method SingleBootConfig.requstScanner is non-static and returns an object assignable to Spring's BeanFactoryPostProcessor interface. This will result in a failure to process annotations such as @Autowired, @Resource and @PostConstruct within the method's declaring @Configuration class. Add the 'static' modifier to this method to avoid these container lifecycle issues; see @Bean javadoc for complete details.
+[2020-03-13 20:46:16 INFO ] org.gameserver.core.network.packet.PacketFactory:72>findClasses - 注册请求:101001 class:class org.gameserver.core.single.module.player.PlayerLoginAuthPacket
+[2020-03-13 20:46:16 INFO ] org.gameserver.core.SingleServerConsole:59>logStarted - Started SingleServerConsole in 0.645 seconds (JVM running for 1.361)
+[2020-03-13 20:46:16 INFO ] org.gameserver.core.SingleServerConsole:35>run - SingleServerConsole run args:org.springframework.boot.DefaultApplicationArguments@1ba05e38
+[2020-03-13 20:46:16 INFO ] org.gameserver.core.server.SingleStartCloseHandler:34>onStart - 单服启动开始
+[2020-03-13 20:46:16 WARN ] io.netty.bootstrap.ServerBootstrap:452>setChannelOption - Unknown channel option 'TCP_NODELAY' for channel '[id: 0x739d0732]'
+[2020-03-13 20:46:16 INFO ] io.netty.handler.logging.LoggingHandler:148>log - [id: 0x739d0732] REGISTERED
+[2020-03-13 20:46:16 INFO ] io.netty.handler.logging.LoggingHandler:148>log - [id: 0x739d0732] BIND: 0.0.0.0/0.0.0.0:9999
+[2020-03-13 20:46:16 INFO ] org.gameserver.core.server.SingleStartCloseHandler:40>onStart - 单服启动成功
+[2020-03-13 20:46:16 INFO ] io.netty.handler.logging.LoggingHandler:148>log - [id: 0x739d0732, L:/0:0:0:0:0:0:0:0:9999] ACTIVE
+[2020-03-13 20:46:27 INFO ] org.gameserver.core.server.SingleStartCloseHandler:28>onClose - 单服开始关服
+[2020-03-13 20:46:27 INFO ] org.gameserver.core.server.SingleStartCloseHandler:29>onClose - 单服关服成功
+[2020-03-13 20:46:46 INFO ] org.gameserver.core.SingleServerConsole:50>logStarting - Starting SingleServerConsole on DESKTOP-0C520QL with PID 3716 (E:\idea-workspace\game-server\game-core\target\classes started by bao in E:\idea-workspace\game-server)
+[2020-03-13 20:46:46 INFO ] org.gameserver.core.SingleServerConsole:675>logStartupProfileInfo - No active profile set, falling back to default profiles: default
+[2020-03-13 20:46:46 INFO ] org.springframework.context.annotation.ConfigurationClassEnhancer:355>intercept - @Bean method SingleBootConfig.requstScanner is non-static and returns an object assignable to Spring's BeanFactoryPostProcessor interface. This will result in a failure to process annotations such as @Autowired, @Resource and @PostConstruct within the method's declaring @Configuration class. Add the 'static' modifier to this method to avoid these container lifecycle issues; see @Bean javadoc for complete details.
+[2020-03-13 20:46:46 INFO ] org.gameserver.core.network.packet.PacketFactory:72>findClasses - 注册请求:101001 class:class org.gameserver.core.single.module.player.PlayerLoginAuthPacket
+[2020-03-13 20:46:46 INFO ] org.gameserver.core.SingleServerConsole:59>logStarted - Started SingleServerConsole in 0.655 seconds (JVM running for 1.362)
+[2020-03-13 20:46:46 INFO ] org.gameserver.core.SingleServerConsole:35>run - SingleServerConsole run args:org.springframework.boot.DefaultApplicationArguments@67403656
+[2020-03-13 20:46:46 INFO ] org.gameserver.core.server.SingleStartCloseHandler:34>onStart - 单服启动开始
+[2020-03-13 20:46:47 WARN ] io.netty.bootstrap.ServerBootstrap:452>setChannelOption - Unknown channel option 'TCP_NODELAY' for channel '[id: 0x321f4f90]'
+[2020-03-13 20:46:47 INFO ] io.netty.handler.logging.LoggingHandler:148>log - [id: 0x321f4f90] REGISTERED
+[2020-03-13 20:46:47 INFO ] io.netty.handler.logging.LoggingHandler:148>log - [id: 0x321f4f90] BIND: 0.0.0.0/0.0.0.0:9999
+[2020-03-13 20:46:47 INFO ] org.gameserver.core.server.SingleStartCloseHandler:40>onStart - 单服启动成功
+[2020-03-13 20:46:47 INFO ] io.netty.handler.logging.LoggingHandler:148>log - [id: 0x321f4f90, L:/0:0:0:0:0:0:0:0:9999] ACTIVE
+[2020-03-13 20:46:54 INFO ] io.netty.handler.logging.LoggingHandler:148>log - [id: 0x321f4f90, L:/0:0:0:0:0:0:0:0:9999] READ: [id: 0x458a0a87, L:/127.0.0.1:9999 - R:/127.0.0.1:65382]
+[2020-03-13 20:46:54 INFO ] io.netty.handler.logging.LoggingHandler:148>log - [id: 0x321f4f90, L:/0:0:0:0:0:0:0:0:9999] READ COMPLETE
+[2020-03-13 20:46:54 INFO ] org.gameserver.core.network.handler.SingleServerMessageHandler:30>channelActive - channel:[id: 0x458a0a87, L:/127.0.0.1:9999 - R:/127.0.0.1:65382] 连接
+[2020-03-13 20:47:09 INFO ] org.gameserver.core.server.SingleStartCloseHandler:28>onClose - 单服开始关服
+[2020-03-13 20:47:09 INFO ] org.gameserver.core.server.SingleStartCloseHandler:29>onClose - 单服关服成功
+[2020-03-13 20:47:12 INFO ] org.gameserver.core.SingleServerConsole:50>logStarting - Starting SingleServerConsole on DESKTOP-0C520QL with PID 13788 (E:\idea-workspace\game-server\game-core\target\classes started by bao in E:\idea-workspace\game-server)
+[2020-03-13 20:47:12 INFO ] org.gameserver.core.SingleServerConsole:675>logStartupProfileInfo - No active profile set, falling back to default profiles: default
+[2020-03-13 20:47:12 INFO ] org.springframework.context.annotation.ConfigurationClassEnhancer:355>intercept - @Bean method SingleBootConfig.requstScanner is non-static and returns an object assignable to Spring's BeanFactoryPostProcessor interface. This will result in a failure to process annotations such as @Autowired, @Resource and @PostConstruct within the method's declaring @Configuration class. Add the 'static' modifier to this method to avoid these container lifecycle issues; see @Bean javadoc for complete details.
+[2020-03-13 20:47:12 INFO ] org.gameserver.core.network.packet.PacketFactory:72>findClasses - 注册请求:101001 class:class org.gameserver.core.single.module.player.PlayerLoginAuthPacket
+[2020-03-13 20:47:12 INFO ] org.gameserver.core.SingleServerConsole:59>logStarted - Started SingleServerConsole in 0.664 seconds (JVM running for 1.382)
+[2020-03-13 20:47:12 INFO ] org.gameserver.core.SingleServerConsole:35>run - SingleServerConsole run args:org.springframework.boot.DefaultApplicationArguments@6a2eea2a
+[2020-03-13 20:47:12 INFO ] org.gameserver.core.server.SingleStartCloseHandler:34>onStart - 单服启动开始
+[2020-03-13 20:47:13 WARN ] io.netty.bootstrap.ServerBootstrap:452>setChannelOption - Unknown channel option 'TCP_NODELAY' for channel '[id: 0xf28dda18]'
+[2020-03-13 20:47:13 INFO ] io.netty.handler.logging.LoggingHandler:148>log - [id: 0xf28dda18] REGISTERED
+[2020-03-13 20:47:13 INFO ] io.netty.handler.logging.LoggingHandler:148>log - [id: 0xf28dda18] BIND: 0.0.0.0/0.0.0.0:9999
+[2020-03-13 20:47:13 INFO ] org.gameserver.core.server.SingleStartCloseHandler:40>onStart - 单服启动成功
+[2020-03-13 20:47:13 INFO ] io.netty.handler.logging.LoggingHandler:148>log - [id: 0xf28dda18, L:/0:0:0:0:0:0:0:0:9999] ACTIVE
+[2020-03-13 20:47:18 INFO ] io.netty.handler.logging.LoggingHandler:148>log - [id: 0xf28dda18, L:/0:0:0:0:0:0:0:0:9999] READ: [id: 0xb319b868, L:/127.0.0.1:9999 - R:/127.0.0.1:49171]
+[2020-03-13 20:47:18 INFO ] io.netty.handler.logging.LoggingHandler:148>log - [id: 0xf28dda18, L:/0:0:0:0:0:0:0:0:9999] READ COMPLETE
+[2020-03-13 20:47:18 INFO ] org.gameserver.core.network.handler.SingleServerMessageHandler:30>channelActive - channel:[id: 0xb319b868, L:/127.0.0.1:9999 - R:/127.0.0.1:49171] 连接
+[2020-03-13 20:51:21 INFO ] org.gameserver.core.server.SingleStartCloseHandler:28>onClose - 单服开始关服
+[2020-03-13 20:51:21 INFO ] org.gameserver.core.server.SingleStartCloseHandler:29>onClose - 单服关服成功
+[2020-03-13 20:52:07 INFO ] org.gameserver.core.SingleServerConsole:50>logStarting - Starting SingleServerConsole on DESKTOP-0C520QL with PID 4636 (E:\idea-workspace\game-server\game-core\target\classes started by bao in E:\idea-workspace\game-server)
+[2020-03-13 20:52:07 INFO ] org.gameserver.core.SingleServerConsole:675>logStartupProfileInfo - No active profile set, falling back to default profiles: default
+[2020-03-13 20:52:07 INFO ] org.springframework.context.annotation.ConfigurationClassEnhancer:355>intercept - @Bean method SingleBootConfig.requstScanner is non-static and returns an object assignable to Spring's BeanFactoryPostProcessor interface. This will result in a failure to process annotations such as @Autowired, @Resource and @PostConstruct within the method's declaring @Configuration class. Add the 'static' modifier to this method to avoid these container lifecycle issues; see @Bean javadoc for complete details.
+[2020-03-13 20:52:07 INFO ] org.gameserver.core.network.packet.PacketFactory:72>findClasses - 注册请求:101001 class:class org.gameserver.core.single.module.player.PlayerLoginAuthPacket
+[2020-03-13 20:52:07 INFO ] org.gameserver.core.SingleServerConsole:59>logStarted - Started SingleServerConsole in 0.649 seconds (JVM running for 1.364)
+[2020-03-13 20:52:07 INFO ] org.gameserver.core.SingleServerConsole:35>run - SingleServerConsole run args:org.springframework.boot.DefaultApplicationArguments@769d513
+[2020-03-13 20:52:07 INFO ] org.gameserver.core.server.SingleStartCloseHandler:34>onStart - 单服启动开始
+[2020-03-13 20:52:07 WARN ] io.netty.bootstrap.ServerBootstrap:452>setChannelOption - Unknown channel option 'TCP_NODELAY' for channel '[id: 0x43bf6d68]'
+[2020-03-13 20:52:07 INFO ] io.netty.handler.logging.LoggingHandler:148>log - [id: 0x43bf6d68] REGISTERED
+[2020-03-13 20:52:07 INFO ] io.netty.handler.logging.LoggingHandler:148>log - [id: 0x43bf6d68] BIND: 0.0.0.0/0.0.0.0:9999
+[2020-03-13 20:52:07 INFO ] org.gameserver.core.server.SingleStartCloseHandler:40>onStart - 单服启动成功
+[2020-03-13 20:52:07 INFO ] io.netty.handler.logging.LoggingHandler:148>log - [id: 0x43bf6d68, L:/0:0:0:0:0:0:0:0:9999] ACTIVE
+[2020-03-13 20:52:18 INFO ] io.netty.handler.logging.LoggingHandler:148>log - [id: 0x43bf6d68, L:/0:0:0:0:0:0:0:0:9999] READ: [id: 0xe552b85a, L:/127.0.0.1:9999 - R:/127.0.0.1:49438]
+[2020-03-13 20:52:18 INFO ] io.netty.handler.logging.LoggingHandler:148>log - [id: 0x43bf6d68, L:/0:0:0:0:0:0:0:0:9999] READ COMPLETE
+[2020-03-13 20:52:18 INFO ] org.gameserver.core.network.handler.SingleServerMessageHandler:30>channelActive - channel:[id: 0xe552b85a, L:/127.0.0.1:9999 - R:/127.0.0.1:49438] 连接
+[2020-03-13 20:52:45 INFO ] org.gameserver.core.server.SingleStartCloseHandler:28>onClose - 单服开始关服
+[2020-03-13 20:52:45 INFO ] org.gameserver.core.server.SingleStartCloseHandler:29>onClose - 单服关服成功
+[2020-03-13 21:21:06 INFO ] org.gameserver.core.SingleServerConsole:50>logStarting - Starting SingleServerConsole on DESKTOP-0C520QL with PID 8632 (E:\idea-workspace\game-server\game-core\target\classes started by bao in E:\idea-workspace\game-server)
+[2020-03-13 21:21:06 INFO ] org.gameserver.core.SingleServerConsole:675>logStartupProfileInfo - No active profile set, falling back to default profiles: default
+[2020-03-13 21:21:06 INFO ] org.springframework.context.annotation.ConfigurationClassEnhancer:355>intercept - @Bean method SingleBootConfig.requstScanner is non-static and returns an object assignable to Spring's BeanFactoryPostProcessor interface. This will result in a failure to process annotations such as @Autowired, @Resource and @PostConstruct within the method's declaring @Configuration class. Add the 'static' modifier to this method to avoid these container lifecycle issues; see @Bean javadoc for complete details.
+[2020-03-13 21:21:06 INFO ] org.gameserver.core.network.packet.PacketFactory:72>findClasses - 注册请求:101001 class:class org.gameserver.core.single.module.player.PlayerLoginAuthPacket
+[2020-03-13 21:21:06 INFO ] org.gameserver.core.SingleServerConsole:59>logStarted - Started SingleServerConsole in 0.666 seconds (JVM running for 1.411)
+[2020-03-13 21:21:06 INFO ] org.gameserver.core.SingleServerConsole:35>run - SingleServerConsole run args:org.springframework.boot.DefaultApplicationArguments@2bac9ba
+[2020-03-13 21:21:06 INFO ] org.gameserver.core.server.SingleStartCloseHandler:34>onStart - 单服启动开始
+[2020-03-13 21:21:07 WARN ] io.netty.bootstrap.ServerBootstrap:452>setChannelOption - Unknown channel option 'TCP_NODELAY' for channel '[id: 0xb2a44186]'
+[2020-03-13 21:21:07 INFO ] io.netty.handler.logging.LoggingHandler:148>log - [id: 0xb2a44186] REGISTERED
+[2020-03-13 21:21:07 INFO ] io.netty.handler.logging.LoggingHandler:148>log - [id: 0xb2a44186] BIND: 0.0.0.0/0.0.0.0:9999
+[2020-03-13 21:21:07 INFO ] org.gameserver.core.server.SingleStartCloseHandler:40>onStart - 单服启动成功
+[2020-03-13 21:21:07 INFO ] io.netty.handler.logging.LoggingHandler:148>log - [id: 0xb2a44186, L:/0:0:0:0:0:0:0:0:9999] ACTIVE
+[2020-03-13 21:21:10 INFO ] io.netty.handler.logging.LoggingHandler:148>log - [id: 0xb2a44186, L:/0:0:0:0:0:0:0:0:9999] READ: [id: 0xf30d71b1, L:/127.0.0.1:9999 - R:/127.0.0.1:50348]
+[2020-03-13 21:21:10 INFO ] io.netty.handler.logging.LoggingHandler:148>log - [id: 0xb2a44186, L:/0:0:0:0:0:0:0:0:9999] READ COMPLETE
+[2020-03-13 21:21:10 INFO ] org.gameserver.core.network.handler.SingleServerMessageHandler:30>channelActive - channel:[id: 0xf30d71b1, L:/127.0.0.1:9999 - R:/127.0.0.1:50348] 连接
+[2020-03-13 21:34:07 INFO ] org.gameserver.core.server.SingleStartCloseHandler:28>onClose - 单服开始关服
+[2020-03-13 21:34:07 INFO ] org.gameserver.core.server.SingleStartCloseHandler:29>onClose - 单服关服成功

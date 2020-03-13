@@ -10,7 +10,15 @@ import java.util.concurrent.ConcurrentHashMap;
  */
 public class SessionManager {
 
-    /** 已经验证的玩家session **/
+    public static final SessionManager instance = new SessionManager();
+
+    public static SessionManager getInstance() {
+        return instance;
+    }
+
+    /**
+     * 已经验证的玩家session
+     **/
     private ConcurrentHashMap<Long, Session> sessionMap = new ConcurrentHashMap<>();
 
     public ConcurrentHashMap<Long, Session> getSessionMap() {

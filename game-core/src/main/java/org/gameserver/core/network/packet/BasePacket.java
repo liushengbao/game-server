@@ -140,5 +140,8 @@ public abstract class BasePacket implements Runnable{
         }
     }
 
+    public Channel channel() {
+        return session.getChannel();
+    }
 
 }

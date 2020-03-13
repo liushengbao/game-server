@@ -9,7 +9,7 @@ import io.netty.util.ReferenceCountUtil;
 import org.gameserver.core.network.packet.BasePacket;
 import org.gameserver.core.network.packet.PacketFactory;
 import org.gameserver.core.network.session.Session;
-import org.gameserver.core.network.work.PacketDispatcher;
+import org.gameserver.core.network.dispatch.PacketDispatcher;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
