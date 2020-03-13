@@ -12,6 +12,8 @@ import io.netty.channel.*;
 import io.netty.channel.nio.NioEventLoopGroup;
 import io.netty.channel.socket.SocketChannel;
 import io.netty.channel.socket.nio.NioSocketChannel;
+import io.netty.handler.codec.LengthFieldBasedFrameDecoder;
+import io.netty.handler.logging.LoggingHandler;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -20,16 +22,11 @@ import org.slf4j.LoggerFactory;
  *
  * @author shengbao.Liu
  */
-public class GameClient extends ChannelInboundHandlerAdapter {
+public class GameClient {
 
     static Logger logger = LoggerFactory.getLogger(GameClientHandler.class);
 
     private Channel channel;
-
-    @Override
-    public void channelRead(ChannelHandlerContext ctx, Object msg) throws Exception {
-        logger.info("channel Read---------");
-    }
 
 
     public void connect(String host, int port) throws InterruptedException {
@@ -38,10 +35,12 @@ public class GameClient extends ChannelInboundHandlerAdapter {
         b.group(workerGroup); // (2)
         b.channel(NioSocketChannel.class); // (3)
         b.option(ChannelOption.SO_KEEPALIVE, true); // (4)
+
         b.handler(new ChannelInitializer<SocketChannel>() {
             @Override
             public void initChannel(SocketChannel ch) throws Exception {
-                ch.pipeline().addLast(this);
+                ch.pipeline().addLast(new LengthFieldBasedFrameDecoder(1024 * 1024, 0, 4));
+                ch.pipeline().addLast(new GameClientHandler());
             }
         });
         // Start the client.

@@ -11,8 +11,7 @@ public class StartClient {
 	public static void main(String[] args) {
 		//游戏网络客户端
 		GameClient client = new GameClient();
-		MainView view = new MainView(client);
-
+		new MainView(client);
 	}
 
 }

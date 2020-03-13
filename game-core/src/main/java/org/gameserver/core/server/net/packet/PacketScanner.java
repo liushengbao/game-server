@@ -1,4 +1,4 @@
-package org.gameserver.core.server.net.request;
+package org.gameserver.core.server.net.packet;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -25,9 +25,9 @@ import java.util.Map;
  * @Author: shengbao
  * @Date: 2020/3/10 16:26
  */
-public class RequstScanner implements BeanFactoryPostProcessor {
+public class PacketScanner implements BeanFactoryPostProcessor {
 
-    Logger logger = LoggerFactory.getLogger(RequstScanner.class);
+    Logger logger = LoggerFactory.getLogger(PacketScanner.class);
 
     /**
      * 扫描路径
@@ -61,10 +61,10 @@ public class RequstScanner implements BeanFactoryPostProcessor {
                 for (Resource r : rs) {
                     MetadataReader reader = metadataReaderFactory.getMetadataReader(r);
                     AnnotationMetadata annotationMD = reader.getAnnotationMetadata();
-                    if (annotationMD.hasAnnotation(Request.class.getName())) {
+                    if (annotationMD.hasAnnotation(Packet.class.getName())) {
                         ClassMetadata clazzMD = reader.getClassMetadata();
                         Class<?> clazz = Class.forName(clazzMD.getClassName());
-                        Request annotation = clazz.getAnnotation(Request.class);
+                        Packet annotation = clazz.getAnnotation(Packet.class);
                         if (annotation != null) {
                             classMap.put(annotation.value(), clazz);
                             logger.info("注册请求:{} class:{}", annotation.value(), clazz);

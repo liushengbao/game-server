@@ -1,12 +1,13 @@
 package org.gameserver.core.server.net.handler;
 
 import io.netty.buffer.ByteBuf;
-import io.netty.channel.Channel;
 import io.netty.channel.ChannelHandlerContext;
 import io.netty.channel.ChannelInboundHandlerAdapter;
 import io.netty.util.ReferenceCountUtil;
-import org.gameserver.core.server.net.request.MsgRequest;
-import org.gameserver.core.server.net.request.RequstScanner;
+import org.gameserver.core.server.net.packet.BasePacket;
+import org.gameserver.core.server.net.packet.PacketScanner;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 /**
  * 消息业务处理
@@ -16,6 +17,8 @@ import org.gameserver.core.server.net.request.RequstScanner;
  */
 public class SingleServerMessageHandler extends ChannelInboundHandlerAdapter {
 
+    static Logger logger = LoggerFactory.getLogger(SingleServerMessageHandler.class);
+
     @Override
     public void channelRead(ChannelHandlerContext ctx, Object msg) throws Exception {
         ByteBuf byteBuf = (ByteBuf) msg;
@@ -23,18 +26,20 @@ public class SingleServerMessageHandler extends ChannelInboundHandlerAdapter {
             byteBuf.retain();
             // 消息长度
             int msgLength = byteBuf.readInt();
-            // 消息id
-            int msgId = byteBuf.readInt();
+            // 包id
+            int packetId = byteBuf.readInt();
 
-            Class<?> clazz = RequstScanner.getClass(msgId);
+            Class<?> clazz = PacketScanner.getClass(packetId);
             Object object = clazz.newInstance();
-            MsgRequest msgRequest = (MsgRequest) object;
-
-            Channel channel = ctx.channel();
+            BasePacket packet = (BasePacket) object;
             //执行消息请求
-            msgRequest.excute(byteBuf);
+            packet.work(packetId, ctx.channel(), byteBuf);
+
+        } catch (Throwable t) {
+            logger.error("", t);
         } finally {
             ReferenceCountUtil.release(byteBuf);
         }
     }
+
 }

@@ -1,5 +1,6 @@
 package com.shengbao.framework.socket;
 
+import io.netty.buffer.ByteBuf;
 import io.netty.channel.ChannelHandlerContext;
 import io.netty.channel.ChannelInboundHandlerAdapter;
 import org.slf4j.Logger;
@@ -15,7 +16,9 @@ public class GameClientHandler extends ChannelInboundHandlerAdapter {
 
     @Override
     public void channelRead(ChannelHandlerContext ctx, Object msg) throws Exception {
-        logger.info("channel Read---------");
-
+        ByteBuf byteBuf = (ByteBuf) msg;
+        int msgLen = byteBuf.readInt();
+        int packetId = byteBuf.readInt();
+        System.out.println("read packetId:" + packetId);
     }
 }

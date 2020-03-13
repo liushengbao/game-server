@@ -25,10 +25,6 @@ public class RequestHandler {
 		return this.netServer;
 	}
 
-	public void connet(String host, int port) throws InterruptedException {
-		netServer.connect(host, port);
-	}
-
 	public Session getSession() {
 		return session;
 	}

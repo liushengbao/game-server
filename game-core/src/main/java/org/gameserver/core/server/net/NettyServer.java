@@ -42,14 +42,14 @@ public class NettyServer implements INetServer {
         bossGroup = new NioEventLoopGroup();
         workerGroup = new NioEventLoopGroup();
         //连接
-        bootstrap.handler(new LoggingHandler(LogLevel.ERROR));
+        bootstrap.handler(new LoggingHandler(LogLevel.INFO));
         //处理io事件和io操作
         bootstrap.childHandler(channelInitializer);
         bootstrap.option(ChannelOption.ALLOCATOR, PooledByteBufAllocator.DEFAULT);
         bootstrap.option(ChannelOption.TCP_NODELAY, true);
         bootstrap.group(bossGroup, workerGroup).channel(NioServerSocketChannel.class);//非阻塞模式
         try {
-            future = bootstrap.bind(7501).sync();
+            future = bootstrap.bind(this.port).sync();
         } catch (Throwable t) {
             logger.error("netty server start error!", t);
             GameLifeCycle.exit();

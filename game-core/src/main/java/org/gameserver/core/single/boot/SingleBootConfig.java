@@ -1,6 +1,8 @@
 package org.gameserver.core.single.boot;
 
-import org.gameserver.core.server.net.request.RequstScanner;
+import org.gameserver.core.server.net.NettyServer;
+import org.gameserver.core.server.net.SingleServerInitalizer;
+import org.gameserver.core.server.net.packet.PacketScanner;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
@@ -20,10 +22,15 @@ import java.util.Arrays;
 public class SingleBootConfig {
 
     @Bean
-    public RequstScanner requstScanner() {
-        RequstScanner requstScanner = new RequstScanner();
-        requstScanner.setPackge(Arrays.asList("org.gameserver"));
-        return requstScanner;
+    public PacketScanner requstScanner() {
+        PacketScanner packetScanner = new PacketScanner();
+        packetScanner.setPackge(Arrays.asList("org.gameserver"));
+        return packetScanner;
+    }
+
+    @Bean
+    public NettyServer nettyServer() {
+        return new NettyServer(9999, new SingleServerInitalizer());
     }
 
 }

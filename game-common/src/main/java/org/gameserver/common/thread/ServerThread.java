@@ -3,12 +3,12 @@ package org.gameserver.common.thread;
 import java.util.concurrent.LinkedBlockingQueue;
 
 /**
- * 有序命令线程
+ * 服务线程
  *
  * @Author: shengbao
  * @Date: 2020/3/10 17:51
  */
-public class OrderedThread extends Thread {
+public class ServerThread extends Thread {
 
     private volatile boolean stop;
     //命令执行队列
@@ -18,7 +18,7 @@ public class OrderedThread extends Thread {
 
     private volatile boolean processingCompleted = false;
 
-    public OrderedThread(ThreadGroup group, String threadName) {
+    public ServerThread(ThreadGroup group, String threadName) {
         super(group, threadName);
         this.threadName = threadName;
         this.setUncaughtExceptionHandler((t, e) -> {
