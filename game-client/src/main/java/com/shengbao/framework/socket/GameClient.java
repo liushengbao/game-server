@@ -54,8 +54,7 @@ public class GameClient {
         int length = 0;
         buffer.writeInt(length);
         buffer.writeInt(packetId);
-        buffer.writeInt(0);
-        length += 8;
+        length += 4;
         if (!params.equals("")) {
             String[] arrs = params.split("&");
             for (int i = 0; i < arrs.length; i++) {

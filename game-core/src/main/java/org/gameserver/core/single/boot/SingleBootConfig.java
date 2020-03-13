@@ -1,8 +1,8 @@
 package org.gameserver.core.single.boot;
 
-import org.gameserver.core.server.net.NettyServer;
-import org.gameserver.core.server.net.SingleServerInitalizer;
-import org.gameserver.core.server.net.packet.PacketScanner;
+import org.gameserver.core.network.NettyServer;
+import org.gameserver.core.network.SingleServerInitalizer;
+import org.gameserver.core.network.packet.PacketFactory;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
@@ -22,8 +22,8 @@ import java.util.Arrays;
 public class SingleBootConfig {
 
     @Bean
-    public PacketScanner requstScanner() {
-        PacketScanner packetScanner = new PacketScanner();
+    public PacketFactory requstScanner() {
+        PacketFactory packetScanner = new PacketFactory();
         packetScanner.setPackge(Arrays.asList("org.gameserver"));
         return packetScanner;
     }

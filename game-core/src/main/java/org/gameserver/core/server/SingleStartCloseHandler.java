@@ -1,11 +1,10 @@
 package org.gameserver.core.server;
 
 
-import org.gameserver.core.server.net.NettyServer;
+import org.gameserver.core.network.NettyServer;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.annotation.Configuration;
 import org.springframework.core.annotation.Order;
 import org.springframework.stereotype.Component;
 

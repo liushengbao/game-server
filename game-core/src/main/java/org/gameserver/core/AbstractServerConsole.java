@@ -2,7 +2,7 @@ package org.gameserver.core;
 
 import org.apache.commons.lang3.StringUtils;
 import org.gameserver.core.annotation.ConsoleCommand;
-import org.gameserver.core.server.life.GameLifeCycle;
+import org.gameserver.core.server.GameLifeCycle;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.aop.support.AopUtils;

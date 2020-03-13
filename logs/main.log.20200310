@@ -48,8 +48,8 @@
 [2020-03-10 16:41:23 INFO ] org.gameserver.core.SingleServerConsole:675>logStartupProfileInfo - No active profile set, falling back to default profiles: default
 [2020-03-10 16:41:23 INFO ] org.springframework.context.annotation.ConfigurationClassEnhancer:355>intercept - @Bean method SingleBootConfig.packetScanner is non-static and returns an object assignable to Spring's BeanFactoryPostProcessor interface. This will result in a failure to process annotations such as @Autowired, @Resource and @PostConstruct within the method's declaring @Configuration class. Add the 'static' modifier to this method to avoid these container lifecycle issues; see @Bean javadoc for complete details.
 [2020-03-10 16:41:23 ERROR] org.springframework.boot.SpringApplication:858>reportFailure - Application run failed java.lang.IllegalStateException: null
-	at org.gameserver.core.server.net.packet.PacketScanner.findClasses(RequstScanner.java:75) ~[classes/:?]
-	at org.gameserver.core.server.net.packet.PacketScanner.postProcessBeanFactory(RequstScanner.java:44) ~[classes/:?]
+	at org.gameserver.core.server.net.packet.PacketFactory.findClasses(RequstScanner.java:75) ~[classes/:?]
+	at org.gameserver.core.server.net.packet.PacketFactory.postProcessBeanFactory(RequstScanner.java:44) ~[classes/:?]
 	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:286) ~[spring-context-5.1.2.RELEASE.jar:5.1.2.RELEASE]
 	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:181) ~[spring-context-5.1.2.RELEASE.jar:5.1.2.RELEASE]
 	at org.springframework.context.support.AbstractApplicationContext.invokeBeanFactoryPostProcessors(AbstractApplicationContext.java:691) ~[spring-context-5.1.2.RELEASE.jar:5.1.2.RELEASE]
@@ -60,15 +60,15 @@
 	at org.springframework.boot.builder.SpringApplicationBuilder.run(SpringApplicationBuilder.java:139) [spring-boot-2.1.0.RELEASE.jar:2.1.0.RELEASE]
 	at org.gameserver.core.SingleServerConsole.main(SingleServerConsole.java:30) [classes/:?]
 Caused by: java.lang.NullPointerException
-	at org.gameserver.core.server.net.packet.PacketScanner.findClasses(RequstScanner.java:68) ~[classes/:?]
+	at org.gameserver.core.server.net.packet.PacketFactory.findClasses(RequstScanner.java:68) ~[classes/:?]
 	... 10 more
 
 [2020-03-10 16:42:14 INFO ] org.gameserver.core.SingleServerConsole:50>logStarting - Starting SingleServerConsole on DESKTOP-0C520QL with PID 1156 (E:\idea-workspace\game-server\game-core\target\classes started by bao in E:\idea-workspace\game-server)
 [2020-03-10 16:42:14 INFO ] org.gameserver.core.SingleServerConsole:675>logStartupProfileInfo - No active profile set, falling back to default profiles: default
 [2020-03-10 16:42:15 INFO ] org.springframework.context.annotation.ConfigurationClassEnhancer:355>intercept - @Bean method SingleBootConfig.packetScanner is non-static and returns an object assignable to Spring's BeanFactoryPostProcessor interface. This will result in a failure to process annotations such as @Autowired, @Resource and @PostConstruct within the method's declaring @Configuration class. Add the 'static' modifier to this method to avoid these container lifecycle issues; see @Bean javadoc for complete details.
 [2020-03-10 16:42:38 ERROR] org.springframework.boot.SpringApplication:858>reportFailure - Application run failed java.lang.IllegalStateException: null
-	at org.gameserver.core.server.net.packet.PacketScanner.findClasses(RequstScanner.java:75) ~[classes/:?]
-	at org.gameserver.core.server.net.packet.PacketScanner.postProcessBeanFactory(RequstScanner.java:44) ~[classes/:?]
+	at org.gameserver.core.server.net.packet.PacketFactory.findClasses(RequstScanner.java:75) ~[classes/:?]
+	at org.gameserver.core.server.net.packet.PacketFactory.postProcessBeanFactory(RequstScanner.java:44) ~[classes/:?]
 	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:286) ~[spring-context-5.1.2.RELEASE.jar:5.1.2.RELEASE]
 	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:181) ~[spring-context-5.1.2.RELEASE.jar:5.1.2.RELEASE]
 	at org.springframework.context.support.AbstractApplicationContext.invokeBeanFactoryPostProcessors(AbstractApplicationContext.java:691) ~[spring-context-5.1.2.RELEASE.jar:5.1.2.RELEASE]
@@ -79,15 +79,15 @@ Caused by: java.lang.NullPointerException
 	at org.springframework.boot.builder.SpringApplicationBuilder.run(SpringApplicationBuilder.java:139) [spring-boot-2.1.0.RELEASE.jar:2.1.0.RELEASE]
 	at org.gameserver.core.SingleServerConsole.main(SingleServerConsole.java:30) [classes/:?]
 Caused by: java.lang.NullPointerException
-	at org.gameserver.core.server.net.packet.PacketScanner.findClasses(RequstScanner.java:68) ~[classes/:?]
+	at org.gameserver.core.server.net.packet.PacketFactory.findClasses(RequstScanner.java:68) ~[classes/:?]
 	... 10 more
 
 [2020-03-10 16:43:24 INFO ] org.gameserver.core.SingleServerConsole:50>logStarting - Starting SingleServerConsole on DESKTOP-0C520QL with PID 912 (E:\idea-workspace\game-server\game-core\target\classes started by bao in E:\idea-workspace\game-server)
 [2020-03-10 16:43:24 INFO ] org.gameserver.core.SingleServerConsole:675>logStartupProfileInfo - No active profile set, falling back to default profiles: default
 [2020-03-10 16:43:24 INFO ] org.springframework.context.annotation.ConfigurationClassEnhancer:355>intercept - @Bean method SingleBootConfig.packetScanner is non-static and returns an object assignable to Spring's BeanFactoryPostProcessor interface. This will result in a failure to process annotations such as @Autowired, @Resource and @PostConstruct within the method's declaring @Configuration class. Add the 'static' modifier to this method to avoid these container lifecycle issues; see @Bean javadoc for complete details.
 [2020-03-10 16:43:24 ERROR] org.springframework.boot.SpringApplication:858>reportFailure - Application run failed java.lang.IllegalStateException: null
-	at org.gameserver.core.server.net.packet.PacketScanner.findClasses(RequstScanner.java:75) ~[classes/:?]
-	at org.gameserver.core.server.net.packet.PacketScanner.postProcessBeanFactory(RequstScanner.java:44) ~[classes/:?]
+	at org.gameserver.core.server.net.packet.PacketFactory.findClasses(RequstScanner.java:75) ~[classes/:?]
+	at org.gameserver.core.server.net.packet.PacketFactory.postProcessBeanFactory(RequstScanner.java:44) ~[classes/:?]
 	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:286) ~[spring-context-5.1.2.RELEASE.jar:5.1.2.RELEASE]
 	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:181) ~[spring-context-5.1.2.RELEASE.jar:5.1.2.RELEASE]
 	at org.springframework.context.support.AbstractApplicationContext.invokeBeanFactoryPostProcessors(AbstractApplicationContext.java:691) ~[spring-context-5.1.2.RELEASE.jar:5.1.2.RELEASE]
@@ -98,15 +98,15 @@ Caused by: java.lang.NullPointerException
 	at org.springframework.boot.builder.SpringApplicationBuilder.run(SpringApplicationBuilder.java:139) [spring-boot-2.1.0.RELEASE.jar:2.1.0.RELEASE]
 	at org.gameserver.core.SingleServerConsole.main(SingleServerConsole.java:30) [classes/:?]
 Caused by: java.lang.NullPointerException
-	at org.gameserver.core.server.net.packet.PacketScanner.findClasses(RequstScanner.java:68) ~[classes/:?]
+	at org.gameserver.core.server.net.packet.PacketFactory.findClasses(RequstScanner.java:68) ~[classes/:?]
 	... 10 more
 
 [2020-03-10 16:45:23 INFO ] org.gameserver.core.SingleServerConsole:50>logStarting - Starting SingleServerConsole on DESKTOP-0C520QL with PID 13460 (E:\idea-workspace\game-server\game-core\target\classes started by bao in E:\idea-workspace\game-server)
 [2020-03-10 16:45:23 INFO ] org.gameserver.core.SingleServerConsole:675>logStartupProfileInfo - No active profile set, falling back to default profiles: default
 [2020-03-10 16:45:23 INFO ] org.springframework.context.annotation.ConfigurationClassEnhancer:355>intercept - @Bean method SingleBootConfig.packetScanner is non-static and returns an object assignable to Spring's BeanFactoryPostProcessor interface. This will result in a failure to process annotations such as @Autowired, @Resource and @PostConstruct within the method's declaring @Configuration class. Add the 'static' modifier to this method to avoid these container lifecycle issues; see @Bean javadoc for complete details.
 [2020-03-10 16:45:24 ERROR] org.springframework.boot.SpringApplication:858>reportFailure - Application run failed java.lang.IllegalStateException: null
-	at org.gameserver.core.server.net.packet.PacketScanner.findClasses(RequstScanner.java:75) ~[classes/:?]
-	at org.gameserver.core.server.net.packet.PacketScanner.postProcessBeanFactory(RequstScanner.java:44) ~[classes/:?]
+	at org.gameserver.core.server.net.packet.PacketFactory.findClasses(RequstScanner.java:75) ~[classes/:?]
+	at org.gameserver.core.server.net.packet.PacketFactory.postProcessBeanFactory(RequstScanner.java:44) ~[classes/:?]
 	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:286) ~[spring-context-5.1.2.RELEASE.jar:5.1.2.RELEASE]
 	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:181) ~[spring-context-5.1.2.RELEASE.jar:5.1.2.RELEASE]
 	at org.springframework.context.support.AbstractApplicationContext.invokeBeanFactoryPostProcessors(AbstractApplicationContext.java:691) ~[spring-context-5.1.2.RELEASE.jar:5.1.2.RELEASE]
@@ -117,15 +117,15 @@ Caused by: java.lang.NullPointerException
 	at org.springframework.boot.builder.SpringApplicationBuilder.run(SpringApplicationBuilder.java:139) [spring-boot-2.1.0.RELEASE.jar:2.1.0.RELEASE]
 	at org.gameserver.core.SingleServerConsole.main(SingleServerConsole.java:30) [classes/:?]
 Caused by: java.lang.NullPointerException
-	at org.gameserver.core.server.net.packet.PacketScanner.findClasses(RequstScanner.java:68) ~[classes/:?]
+	at org.gameserver.core.server.net.packet.PacketFactory.findClasses(RequstScanner.java:68) ~[classes/:?]
 	... 10 more
 
 [2020-03-10 16:45:29 INFO ] org.gameserver.core.SingleServerConsole:50>logStarting - Starting SingleServerConsole on DESKTOP-0C520QL with PID 12708 (E:\idea-workspace\game-server\game-core\target\classes started by bao in E:\idea-workspace\game-server)
 [2020-03-10 16:45:29 INFO ] org.gameserver.core.SingleServerConsole:675>logStartupProfileInfo - No active profile set, falling back to default profiles: default
 [2020-03-10 16:45:29 INFO ] org.springframework.context.annotation.ConfigurationClassEnhancer:355>intercept - @Bean method SingleBootConfig.packetScanner is non-static and returns an object assignable to Spring's BeanFactoryPostProcessor interface. This will result in a failure to process annotations such as @Autowired, @Resource and @PostConstruct within the method's declaring @Configuration class. Add the 'static' modifier to this method to avoid these container lifecycle issues; see @Bean javadoc for complete details.
 [2020-03-10 16:46:07 ERROR] org.springframework.boot.SpringApplication:858>reportFailure - Application run failed java.lang.IllegalStateException: null
-	at org.gameserver.core.server.net.packet.PacketScanner.findClasses(RequstScanner.java:75) ~[classes/:?]
-	at org.gameserver.core.server.net.packet.PacketScanner.postProcessBeanFactory(RequstScanner.java:44) ~[classes/:?]
+	at org.gameserver.core.server.net.packet.PacketFactory.findClasses(RequstScanner.java:75) ~[classes/:?]
+	at org.gameserver.core.server.net.packet.PacketFactory.postProcessBeanFactory(RequstScanner.java:44) ~[classes/:?]
 	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:286) ~[spring-context-5.1.2.RELEASE.jar:5.1.2.RELEASE]
 	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:181) ~[spring-context-5.1.2.RELEASE.jar:5.1.2.RELEASE]
 	at org.springframework.context.support.AbstractApplicationContext.invokeBeanFactoryPostProcessors(AbstractApplicationContext.java:691) ~[spring-context-5.1.2.RELEASE.jar:5.1.2.RELEASE]
@@ -136,7 +136,7 @@ Caused by: java.lang.NullPointerException
 	at org.springframework.boot.builder.SpringApplicationBuilder.run(SpringApplicationBuilder.java:139) [spring-boot-2.1.0.RELEASE.jar:2.1.0.RELEASE]
 	at org.gameserver.core.SingleServerConsole.main(SingleServerConsole.java:30) [classes/:?]
 Caused by: java.lang.NullPointerException
-	at org.gameserver.core.server.net.packet.PacketScanner.findClasses(RequstScanner.java:68) ~[classes/:?]
+	at org.gameserver.core.server.net.packet.PacketFactory.findClasses(RequstScanner.java:68) ~[classes/:?]
 	... 10 more
 
 [2020-03-10 16:46:46 INFO ] org.gameserver.core.SingleServerConsole:50>logStarting - Starting SingleServerConsole on DESKTOP-0C520QL with PID 10160 (E:\idea-workspace\game-server\game-core\target\classes started by bao in E:\idea-workspace\game-server)
@@ -151,8 +151,8 @@ Caused by: java.lang.NullPointerException
 [2020-03-10 16:50:15 INFO ] org.gameserver.core.SingleServerConsole:50>logStarting - Starting SingleServerConsole on DESKTOP-0C520QL with PID 10912 (E:\idea-workspace\game-server\game-core\target\classes started by bao in E:\idea-workspace\game-server)
 [2020-03-10 16:50:15 INFO ] org.gameserver.core.SingleServerConsole:675>logStartupProfileInfo - No active profile set, falling back to default profiles: default
 [2020-03-10 16:50:16 INFO ] org.springframework.context.annotation.ConfigurationClassEnhancer:355>intercept - @Bean method SingleBootConfig.packetScanner is non-static and returns an object assignable to Spring's BeanFactoryPostProcessor interface. This will result in a failure to process annotations such as @Autowired, @Resource and @PostConstruct within the method's declaring @Configuration class. Add the 'static' modifier to this method to avoid these container lifecycle issues; see @Bean javadoc for complete details.
-[2020-03-10 16:50:16 INFO ] org.gameserver.core.server.net.packet.PacketScanner:70>findClasses - 注册请求:101001 class:class org.gameserver.core.single.module.player.PlayerLoginPacket
-[2020-03-10 16:50:16 INFO ] org.gameserver.core.server.net.packet.PacketScanner:70>findClasses - 注册请求:101002 class:class org.gameserver.core.single.module.player.PlayerRegistPacket
+[2020-03-10 16:50:16 INFO ] org.gameserver.core.server.net.packet.PacketFactory:70>findClasses - 注册请求:101001 class:class org.gameserver.core.single.module.player.PlayerLoginAuthPacket
+[2020-03-10 16:50:16 INFO ] org.gameserver.core.server.net.packet.PacketFactory:70>findClasses - 注册请求:101002 class:class org.gameserver.core.single.module.player.PlayerRegistPacket
 [2020-03-10 16:50:16 INFO ] org.gameserver.core.SingleServerConsole:59>logStarted - Started SingleServerConsole in 0.657 seconds (JVM running for 1.358)
 [2020-03-10 16:50:16 INFO ] org.gameserver.core.SingleServerConsole:35>run - SingleServerConsole run args:org.springframework.boot.DefaultApplicationArguments@14fc5d40
 [2020-03-10 16:50:16 INFO ] org.gameserver.core.server.SingleStartCloseHandler:30>onStart - 单服启动开始
